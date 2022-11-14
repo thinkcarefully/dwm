@@ -41,7 +41,7 @@ rtile(Monitor *m)
 {
 	unsigned int i, n;
 	int mx = 0, my = 0, mh = 0, mw = 0;
-	int /* sx = 0,*/ sy = 0, sh = 0, sw = 0;
+	int sx = 0, sy = 0, sh = 0, sw = 0;
 	float mfacts, sfacts;
 	int mrest, srest;
 	Client *c;
