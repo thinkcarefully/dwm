@@ -22,7 +22,6 @@ The upside of this is that you may still choose your own preferred patches to in
 
 Building & Installing
 ---------------------
-cd dwm
-make clean
-make
+cd dwm-rmaster
+make clean && make
 sudo make install
