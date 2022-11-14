@@ -40,8 +40,8 @@ static void
 rtile(Monitor *m)
 {
 	unsigned int i, n;
-	int mx = 0, my = 0, mh = 0, mw = 0;
-	int sx = 0, sy = 0, sh = 0, sw = 0;
+	int my = 0, mh = 0, mw = 0;
+	int sy = 0, sh = 0, sw = 0;
 	float mfacts, sfacts;
 	int mrest, srest;
 	Client *c;
@@ -51,7 +51,7 @@ rtile(Monitor *m)
 	if (n == 0)
 		return;
 
-	sx = mx = m->wx;
+	/* mx = m->wx; */
 	sy = my = m->wy;
 	sh = mh = m->wh;
 	sw = mw = m->ww;
@@ -59,7 +59,7 @@ rtile(Monitor *m)
 	if (m->nmaster /* && n > m->nmaster */) {
 		sw = mw * m->mfact;
 		mw = mw * (1 - m->mfact);
-		sx = mx + mw;
+		/* sx = mx + mw; */
 	}
 
 	getfacts(m, mh, sh, &mfacts, &sfacts, &mrest, &srest);
