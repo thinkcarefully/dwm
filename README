@@ -6,7 +6,7 @@ More info: https://dwm.suckless.org/
 
 Changes
 -------
-The default tiled layout displays the master window on the right side, with the stack on the left.
+My default tiled layout displays the master window on the right side, and the stack on the left.
 
 Additionally, the master window will always remain the same size in tiling mode. It may still be switched to Monocle (fullscreen) mode using [MOD]-m when needed.
 
