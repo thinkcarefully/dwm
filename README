@@ -2,47 +2,27 @@ dwm - dynamic window manager
 ============================
 dwm is an extremely fast, small, and dynamic window manager for X.
 
+More info: https://dwm.suckless.org/
 
-Requirements
-------------
-In order to build dwm you need the Xlib header files.
+Changes
+-------
+The default tiled layout displays the master window on the right side, with the stack on the left.
 
+Additionally, the master window will always remain the same size in tiling mode. It may still be switched to Monocle (fullscreen) mode using [MOD]-m when needed.
 
-Installation
-------------
-Edit config.mk to match your local setup (dwm is installed into
-the /usr/local namespace by default).
+The reason for these changes was to allow the eyes to remain closer to the display center, rather than frequently at the left edge. Also, text is more readable when it isn't full screen width.
 
-Afterwards enter the following command to build and install dwm (if
-necessary as root):
+NOTE: These changes were made using bakkeby's dwm-flexipatch as a starting point.
 
-    make clean install
+https://github.com/bakkeby/dwm-flexipatch
 
+I have not run bakkeby's flexipatch-finalizer. The downside of this is that there is plenty of extra, dead code based on my particular patch selections in 'patches.h'.
 
-Running dwm
------------
-Add the following line to your .xinitrc to start dwm using startx:
+The upside of this is that you may still choose your own preferred patches to include.
 
-    exec dwm
-
-In order to connect dwm to a specific display, make sure that
-the DISPLAY environment variable is set correctly, e.g.:
-
-    DISPLAY=foo.bar:1 exec dwm
-
-(This will start dwm on display :1 of the host foo.bar.)
-
-In order to display status info in the bar, you can do something
-like this in your .xinitrc:
-
-    while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
-    do
-    	sleep 1
-    done &
-    exec dwm
-
-
-Configuration
--------------
-The configuration of dwm is done by creating a custom config.h
-and (re)compiling the source code.
+Building & Installing
+---------------------
+cd dwm
+make clean
+make
+sudo make install
