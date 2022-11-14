@@ -10,7 +10,7 @@ The default tiled layout displays the master window on the right side, with the 
 
 Additionally, the master window will always remain the same size in tiling mode. It may still be switched to Monocle (fullscreen) mode using [MOD]-m when needed.
 
-The reason for these changes was to allow the eyes to remain closer to the display center, rather than frequently at the left edge. Also, text is more readable when it isn't full screen width.
+The reason for these changes was to allow the eyes to remain closer to the display center, rather than frequently at the left edge. Besides, text is more readable when it isn't full screen width.
 
 NOTE: These changes were made using bakkeby's dwm-flexipatch as a starting point.
 
